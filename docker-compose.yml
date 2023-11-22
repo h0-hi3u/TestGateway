@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+  categoryservices:
+    image: ${DOCKER_REGISTRY}/categoryservices
+    build:
+      context: .
+      dockerfile: CategoryServices/Dockerfile
+
+  productservices:
+    image: ${DOCKER_REGISTRY}/productservices
+    build:
+      context: .
+      dockerfile: ProductServices/Dockerfile
+
+  supplierservices:
+    image: ${DOCKER_REGISTRY}/supplierservices
+    build:
+      context: .
+      dockerfile: SupplierServices/Dockerfile
+
+
+  testgateway:
+    image: ${DOCKER_REGISTRY}/testgateway
+    build:
+      context: .
+      dockerfile: TestGateway/Dockerfile
+    ports:
+      - 20000:80
+
+networks:
+  dev:
+    external: true

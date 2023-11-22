@@ -1,0 +1,191 @@
+{
+  "Routes": [
+    //Product
+    { //Get all product
+      "DownstreamPathTemplate": "/api/product",
+      "DownstreamSchema": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "productservices",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/product",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    { // Get one product by Id
+      "DownstreamPathTemplate": "/api/product/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "productservices",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/product/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    { // Create product
+      "DownstreamPathTemplate": "/api/product",
+      "DownstreamSchema": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "productservices",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/product",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    { // Update product
+      "DownstreamPathTemplate": "/api/product/{id}",
+      "DownstreamSchema": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "productservices",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/product/{id}",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    { // Delete product
+      "DownstreamPathTemplate": "/api/product/{id}",
+      "DownstreamSchema": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "productservices",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/product/{id}",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+    //Supplier
+    { // Get all supllier
+      "DownstreamPathTemplate": "/api/supplier",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "supplierservices",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/supplier",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    { // Get one supplier by Id
+      "DownstreamPathTemplate": "/api/supplier/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "supplierservices",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/supplier/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    { // Create supplier
+      "DownstreamPathTemplate": "/api/supplier",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "supplierservices",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/supplier",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    { // Update supplier
+      "DownstreamPathTemplate": "/api/supplier/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "supplierservices",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/supplier/{id}",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    { // Delete supplier by Id
+      "DownstreamPathTemplate": "/api/supplier/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "supplierservices",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/supplier/{id}",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+    //Category
+    { // Get all category
+      "DownstreamPathTemplate": "/api/category",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "categoryservices",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/category",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    { // Get one category by Id
+      "DownstreamPathTemplate": "/api/category/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "categoryservices",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/category/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    { // Create category
+      "DownstreamPathTemplate": "/api/category",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "categoryservices",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/category",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    { // Update category
+      "DownstreamPathTemplate": "/api/category/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "categoryservices",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/category/{id}",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    { // Delete category
+      "DownstreamPathTemplate": "/api/category/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "categoryservices",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/category/{id}",
+      "UpstreamHttpMethod": [ "Delete" ]
+    }
+  ],
+
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:80"
+  }
+}
